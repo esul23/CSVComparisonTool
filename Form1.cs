@@ -16,5 +16,11 @@ namespace ComparisonTool
         {
             InitializeComponent();
         }
+
+        public void buttonFirstFileBrowse_Click(object sender, EventArgs e)
+        {
+            FileHandler fileInstance = new FileHandler();
+            textBoxFirstFileEntry.Text = fileInstance.RetrieveFilePath();
+        }
     }
 }
