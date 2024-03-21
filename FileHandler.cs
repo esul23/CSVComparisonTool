@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,15 @@ namespace ComparisonTool
             }
 
             return filePath;
+        }
+
+        public List<string> GetFileDataRows(string filePath)
+        {
+            List<string> rowsToReturn = new List<string>();
+
+            rowsToReturn.AddRange(File.ReadAllLines(filePath));
+            
+            return rowsToReturn;
         }
     }
 }
