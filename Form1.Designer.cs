@@ -144,6 +144,7 @@
             this.buttonSecondFileBrowse.TabIndex = 6;
             this.buttonSecondFileBrowse.Text = "Browse";
             this.buttonSecondFileBrowse.UseVisualStyleBackColor = true;
+            this.buttonSecondFileBrowse.Click += new System.EventHandler(this.buttonSecondFileBrowse_Click);
             // 
             // buttonCompare
             // 
