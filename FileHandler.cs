@@ -10,12 +10,13 @@ namespace ComparisonTool
 {
     public class FileHandler
     {
-        public string RetrieveFilePath()
+        public static string GetFilePath()
         {
             string filePath = "";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = @"C:\Users\ericn\Desktop\Target";
             openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+            openFileDialog.FilterIndex = 1;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 filePath = openFileDialog.FileName;
@@ -24,7 +25,7 @@ namespace ComparisonTool
             return filePath;
         }
 
-        public List<string> GetFileDataRows(string filePath)
+        public static List<string> GetFileData(string filePath)
         {
             List<string> rowsToReturn = new List<string>();
 

@@ -19,14 +19,17 @@ namespace ComparisonTool
 
         public void buttonFirstFileBrowse_Click(object sender, EventArgs e)
         {
-            FileHandler firstFileInstance = new FileHandler();
-            textBoxFirstFileEntry.Text = firstFileInstance.RetrieveFilePath();
+            textBoxFirstFileEntry.Text = FileHandler.GetFilePath();
         }
 
         private void buttonSecondFileBrowse_Click(object sender, EventArgs e)
         {
-            FileHandler secondFileInstance = new FileHandler();
-            textBoxSecondFileEntry.Text = secondFileInstance.RetrieveFilePath();
+            textBoxSecondFileEntry.Text = FileHandler.GetFilePath();
+        }
+
+        private void buttonCompare_Click(object sender, EventArgs e)
+        {
+            FileHandler.GetFileData();
         }
     }
 }
