@@ -13,14 +13,22 @@ namespace ComparisonTool
         public static string GetFilePath()
         {
             string filePath = "";
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = @"C:\Users\ericn\Desktop\Target";
-            openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
-            openFileDialog.FilterIndex = 1;
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                filePath = openFileDialog.FileName;
+
+                openFileDialog.InitialDirectory = @"C:\Users\ericn\Desktop\Target";
+                openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = openFileDialog.FileName;
+                }
             }
+            
+            
 
             return filePath;
         }
