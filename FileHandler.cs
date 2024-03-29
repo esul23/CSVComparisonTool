@@ -39,16 +39,7 @@ namespace ComparisonTool
             
             string fileExtension = Path.GetExtension(filePath);
 
-            switch (fileExtension)
-            {
-                case ("pdf"):
-
-                    break;
-
-                case ("csv"):
-                    rowsToReturn.AddRange(File.ReadAllLines(filePath));
-                    break;
-            }
+            rowsToReturn.AddRange(File.ReadAllLines(filePath));
 
             return rowsToReturn;
         }
