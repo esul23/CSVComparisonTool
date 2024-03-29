@@ -29,7 +29,10 @@ namespace ComparisonTool
 
         private void buttonCompare_Click(object sender, EventArgs e)
         {
-            FileHandler.GetFileData();
+            List<string> firstFileData =  FileHandler.GetFileData(textBoxFirstFileEntry.Text);
+            List<string> secondFileData = FileHandler.GetFileData(textBoxSecondFileEntry.Text);
+
+
         }
     }
 }

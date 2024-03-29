@@ -36,9 +36,20 @@ namespace ComparisonTool
         public static List<string> GetFileData(string filePath)
         {
             List<string> rowsToReturn = new List<string>();
-
-            rowsToReturn.AddRange(File.ReadAllLines(filePath));
             
+            string fileExtension = Path.GetExtension(filePath);
+
+            switch (fileExtension)
+            {
+                case ("pdf"):
+
+                    break;
+
+                case ("csv"):
+                    rowsToReturn.AddRange(File.ReadAllLines(filePath));
+                    break;
+            }
+
             return rowsToReturn;
         }
     }
