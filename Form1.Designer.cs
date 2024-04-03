@@ -32,6 +32,7 @@
             this.textBoxFirstFileEntry = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridViewComparison = new System.Windows.Forms.DataGridView();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonCompare = new System.Windows.Forms.Button();
             this.buttonSecondFileBrowse = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.labelSecondFile = new System.Windows.Forms.Label();
             this.textBoxSecondFileEntry = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridViewComparison = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewComparison)).BeginInit();
@@ -63,6 +63,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
@@ -89,6 +92,20 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Comparison";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewComparison
+            // 
+            this.dataGridViewComparison.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewComparison.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewComparison.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewComparison.Location = new System.Drawing.Point(17, 236);
+            this.dataGridViewComparison.Name = "dataGridViewComparison";
+            this.dataGridViewComparison.RowHeadersWidth = 51;
+            this.dataGridViewComparison.RowTemplate.Height = 24;
+            this.dataGridViewComparison.Size = new System.Drawing.Size(977, 245);
+            this.dataGridViewComparison.TabIndex = 9;
             // 
             // buttonClear
             // 
@@ -150,20 +167,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 397);
+            this.tabPage2.Size = new System.Drawing.Size(1017, 508);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewComparison
-            // 
-            this.dataGridViewComparison.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewComparison.Location = new System.Drawing.Point(17, 236);
-            this.dataGridViewComparison.Name = "dataGridViewComparison";
-            this.dataGridViewComparison.RowHeadersWidth = 51;
-            this.dataGridViewComparison.RowTemplate.Height = 24;
-            this.dataGridViewComparison.Size = new System.Drawing.Size(977, 245);
-            this.dataGridViewComparison.TabIndex = 9;
             // 
             // Form1
             // 
