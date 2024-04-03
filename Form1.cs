@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,12 @@ namespace ComparisonTool
 
         private void buttonCompare_Click(object sender, EventArgs e)
         {
+            if (!File.Exists(textBoxFirstFileEntry.Text) || !File.Exists(textBoxSecondFileEntry.Text))
+            {
+                MessageBox.Show("Please enter 2 valid paths before comparing");
+                return;
+            }
+            
             List<string> firstFileData =  FileHandler.GetFileData(textBoxFirstFileEntry.Text);
             List<string> secondFileData = FileHandler.GetFileData(textBoxSecondFileEntry.Text);
             
