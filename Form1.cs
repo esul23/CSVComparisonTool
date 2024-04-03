@@ -38,5 +38,12 @@ namespace ComparisonTool
             dataGridViewComparison.DataSource = dt;
 
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxFirstFileEntry.Clear();
+            textBoxSecondFileEntry.Clear();
+            dataGridViewComparison.DataSource = null;
+        }
     }
 }
