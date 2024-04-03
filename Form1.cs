@@ -32,6 +32,9 @@ namespace ComparisonTool
             List<string> firstFileData =  FileHandler.GetFileData(textBoxFirstFileEntry.Text);
             List<string> secondFileData = FileHandler.GetFileData(textBoxSecondFileEntry.Text);
 
+            List<string> uniqueData = FileHandler.CompareData(firstFileData, secondFileData);
+
+            dataGridViewComparison.DataSource = uniqueData;
 
         }
     }

@@ -35,13 +35,29 @@ namespace ComparisonTool
 
         public static List<string> GetFileData(string filePath)
         {
-            List<string> rowsToReturn = new List<string>();
-            
-            string fileExtension = Path.GetExtension(filePath);
+            List<string> fileData = new List<string>();
 
-            rowsToReturn.AddRange(File.ReadAllLines(filePath));
+            using (StreamReader str = new StreamReader(filePath))
+            {
+                
+                while (!str.EndOfStream)
+                {
+                    fileData.Add(str.ReadLine());
+                    
+                }
+            }
+            return fileData;
+        }
 
-            return rowsToReturn;
+        public static List<string> CompareData(List<string> file1Data, List<string> file2Data)
+        {
+            List<string> dataDifferences = new List<string>();
+
+
+
+
+            return dataDifferences;
+
         }
     }
 }
