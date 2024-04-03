@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -49,14 +50,33 @@ namespace ComparisonTool
             return fileData;
         }
 
-        public static List<string> CompareData(List<string> file1Data, List<string> file2Data)
+        public static DataTable CompareData(List<string> file1Data, List<string> file2Data)
         {
-            List<string> dataDifferences = new List<string>();
+            // List<string> dataDifferences = new List<string>();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("File 1", typeof(string));
+            dt.Columns.Add("File 2", typeof(string));
+
+            for (int i = file1Data.Count - 1; i >= 0; i--)
+            {
+                if (file2Data.Contains(file1Data[i]))
+                {
+                    file2Data.Remove(file1Data[i]);
+                    file1Data.RemoveAt(i);
+                }
+            }
+
+            foreach (var line in file1Data)
+            {
+                dt.Rows.Add(line, "");
+            }
+            foreach (var line in file2Data)
+            {
+                dt.Rows.Add("", line);
+            }
 
 
-
-
-            return dataDifferences;
+            return dt;
 
         }
     }

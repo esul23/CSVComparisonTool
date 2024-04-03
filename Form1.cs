@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace ComparisonTool
@@ -31,10 +32,10 @@ namespace ComparisonTool
         {
             List<string> firstFileData =  FileHandler.GetFileData(textBoxFirstFileEntry.Text);
             List<string> secondFileData = FileHandler.GetFileData(textBoxSecondFileEntry.Text);
+            
+            DataTable dt = FileHandler.CompareData(firstFileData, secondFileData);
 
-            List<string> uniqueData = FileHandler.CompareData(firstFileData, secondFileData);
-
-            dataGridViewComparison.DataSource = uniqueData;
+            dataGridViewComparison.DataSource = dt;
 
         }
     }
