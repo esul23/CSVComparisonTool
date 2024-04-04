@@ -18,7 +18,7 @@ namespace CSVComparisonTool
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
 
-                openFileDialog.InitialDirectory = @"C:\Users\ericn\Desktop\Target";
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
