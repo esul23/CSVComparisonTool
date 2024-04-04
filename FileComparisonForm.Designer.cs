@@ -1,6 +1,6 @@
 ﻿namespace ComparisonTool
 {
-    partial class Form1
+    partial class FileComparisonForm
     {
         /// <summary>
         /// Required designer variable.
