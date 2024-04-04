@@ -1,4 +1,4 @@
-﻿namespace ComparisonTool
+﻿namespace CSVComparisonTool
 {
     partial class FileComparisonForm
     {

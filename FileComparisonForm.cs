@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 
-namespace ComparisonTool
+namespace CSVComparisonTool
 {
     public partial class FileComparisonForm : Form
     {
