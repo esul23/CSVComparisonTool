@@ -54,8 +54,8 @@ namespace CSVComparisonTool
         {
             // List<string> dataDifferences = new List<string>();
             DataTable dt = new DataTable();
-            dt.Columns.Add("File 1", typeof(string));
-            dt.Columns.Add("File 2", typeof(string));
+            dt.Columns.Add("File 1 Unique Rows", typeof(string));
+            dt.Columns.Add("File 2 Unique Rows", typeof(string));
 
             for (int i = file1Data.Count - 1; i >= 0; i--)
             {
