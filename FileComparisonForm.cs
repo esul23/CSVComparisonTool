@@ -44,6 +44,8 @@ namespace CSVComparisonTool
 
             dataGridViewComparison.DataSource = dt;
 
+            if (dt.Rows.Count == 0) { MessageBox.Show("Files are the same"); }
+
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
