@@ -173,14 +173,14 @@
             this.tabPage2.Text = "Settings";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FileComparisonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 550);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "File Comparison Tool";
+            this.Name = "FileComparisonForm";
+            this.Text = "CSV File Comparison Tool";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
